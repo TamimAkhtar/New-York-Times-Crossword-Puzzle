@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="mainPane" maxHeight="1000.0" maxWidth="1800.0" minHeight="1000.0" minWidth="1800.0" prefHeight="1000.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="solveButton" layoutX="1279.0" layoutY="704.0" mnemonicParsing="false" onMouseClicked="#pressButton" prefHeight="64.0" prefWidth="257.0" text="Solve the Puzzle">
+            <font>
+                <Font name="Cambria Bold" size="22.0" />
+            </font></Button>
+        <AnchorPane fx:id="nytSolutionPanel" layoutX="48.0" layoutY="154.0" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
+            <children>
+                <Rectangle fx:id="nytcell0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell16" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell19" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell23" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle fx:id="nytcell21" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+            <Label fx:id="nytblocknum0" alignment="CENTER" layoutX="2.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+            <Label fx:id="nytblocknum1" alignment="CENTER" layoutX="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum5" alignment="CENTER" layoutX="2.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum4" alignment="CENTER" layoutX="400.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum3" alignment="CENTER" layoutX="300.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum2" alignment="CENTER" layoutX="200.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum12" alignment="CENTER" layoutX="200.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum11" alignment="CENTER" layoutX="100.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum10" alignment="CENTER" layoutX="2.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum9" alignment="CENTER" layoutX="400.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum8" alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum7" alignment="CENTER" layoutX="200.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum6" alignment="CENTER" layoutX="100.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum17" alignment="CENTER" layoutX="200.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum16" alignment="CENTER" layoutX="100.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum15" alignment="CENTER" layoutX="2.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum14" alignment="CENTER" layoutX="400.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum13" alignment="CENTER" layoutX="300.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum24" alignment="CENTER" layoutX="400.0" layoutY="395.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum23" alignment="CENTER" layoutX="300.0" layoutY="395.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum22" alignment="CENTER" layoutX="198.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum21" alignment="CENTER" layoutX="100.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum20" alignment="CENTER" layoutX="2.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum19" alignment="CENTER" layoutX="400.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytblocknum18" alignment="CENTER" layoutX="300.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell0" alignment="CENTER" layoutX="4.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell4" alignment="CENTER" layoutX="404.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell3" alignment="CENTER" layoutX="304.0" layoutY="3.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell2" alignment="CENTER" layoutX="204.0" layoutY="3.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell1" alignment="CENTER" layoutX="104.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell9" alignment="CENTER" layoutX="404.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell14" alignment="CENTER" layoutX="404.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell13" alignment="CENTER" layoutX="304.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell12" alignment="CENTER" layoutX="204.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell11" alignment="CENTER" layoutX="104.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell10" alignment="CENTER" layoutX="4.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell8" alignment="CENTER" layoutX="304.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell6" alignment="CENTER" layoutX="104.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell5" alignment="CENTER" layoutX="4.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell7" alignment="CENTER" layoutX="204.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell15" alignment="CENTER" layoutX="8.0" layoutY="298.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell16" alignment="CENTER" layoutX="104.0" layoutY="298.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell17" alignment="CENTER" layoutX="204.0" layoutY="301.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell18" alignment="CENTER" layoutX="304.0" layoutY="301.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell19" alignment="CENTER" layoutX="404.0" layoutY="301.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell24" alignment="CENTER" layoutX="404.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell23" alignment="CENTER" layoutX="304.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell22" alignment="CENTER" layoutX="204.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell21" alignment="CENTER" layoutX="104.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="nytsolucell20" alignment="CENTER" layoutX="8.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+        <AnchorPane layoutX="1157.0" layoutY="154.0" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
+            <children>
+                <Rectangle fx:id="plutocell0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell1" fx:id="plutocell1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell2" fx:id="plutocell2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell3" fx:id="plutocell3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell4" fx:id="plutocell4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell5" fx:id="plutocell5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell6" fx:id="plutocell6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell7" fx:id="plutocell7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell8" fx:id="plutocell8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell9" fx:id="plutocell9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell10" fx:id="plutocell10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell11" fx:id="plutocell11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell12" fx:id="plutocell12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell13" fx:id="plutocell13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell15" fx:id="plutocell15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell14" fx:id="plutocell14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell20" fx:id="plutocell20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell16" fx:id="plutocell16" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell17" fx:id="plutocell17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell18" fx:id="plutocell18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell19" fx:id="plutocell19" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell22" fx:id="plutocell22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="200.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell23" fx:id="plutocell23" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="300.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell24" fx:id="plutocell24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="400.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+                <Rectangle id="pluto-cell21" fx:id="plutocell21" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="100.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="100.0" />
+            <Label fx:id="plutoblocknum0" alignment="CENTER" layoutX="2.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum1" alignment="CENTER" layoutX="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum4" alignment="CENTER" layoutX="400.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum3" alignment="CENTER" layoutX="300.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum2" alignment="CENTER" layoutX="200.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum20" alignment="CENTER" layoutX="2.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum15" alignment="CENTER" layoutX="2.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum10" alignment="CENTER" layoutX="2.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum5" alignment="CENTER" layoutX="2.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum21" alignment="CENTER" layoutX="100.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum16" alignment="CENTER" layoutX="100.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum11" alignment="CENTER" layoutX="100.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum6" alignment="CENTER" layoutX="100.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum19" alignment="CENTER" layoutX="400.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum18" alignment="CENTER" layoutX="300.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum17" alignment="CENTER" layoutX="200.0" layoutY="298.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum24" alignment="CENTER" layoutX="400.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum23" alignment="CENTER" layoutX="300.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum22" alignment="CENTER" layoutX="200.0" layoutY="398.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum13" alignment="CENTER" layoutX="300.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum9" alignment="CENTER" layoutX="400.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum8" alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum12" alignment="CENTER" layoutX="200.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum7" alignment="CENTER" layoutX="200.0" layoutY="100.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutoblocknum14" alignment="CENTER" layoutX="400.0" layoutY="198.0" prefHeight="38.0" prefWidth="25.0" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol0" alignment="CENTER" layoutX="4.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol1" alignment="CENTER" layoutX="104.0" layoutY="3.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol6" alignment="CENTER" layoutX="104.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol18" alignment="CENTER" layoutX="304.0" layoutY="298.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol19" alignment="CENTER" layoutX="404.0" layoutY="298.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol10" alignment="CENTER" layoutX="4.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol11" alignment="CENTER" layoutX="104.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol12" alignment="CENTER" layoutX="204.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol13" alignment="CENTER" layoutX="304.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol14" alignment="CENTER" layoutX="404.0" layoutY="198.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol7" alignment="CENTER" layoutX="204.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol2" alignment="CENTER" layoutX="204.0" layoutY="3.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol8" alignment="CENTER" layoutX="304.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol9" alignment="CENTER" layoutX="404.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol3" alignment="CENTER" layoutX="304.0" layoutY="3.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol4" alignment="CENTER" layoutX="404.0" layoutY="3.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol5" alignment="CENTER" layoutX="4.0" layoutY="100.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol21" alignment="CENTER" layoutX="104.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol20" alignment="CENTER" layoutX="4.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol15" alignment="CENTER" layoutX="4.0" layoutY="298.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol16" alignment="CENTER" layoutX="104.0" layoutY="298.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol17" alignment="CENTER" layoutX="204.0" layoutY="301.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol22" alignment="CENTER" layoutX="204.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol23" alignment="CENTER" layoutX="304.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            <Label fx:id="plutocellsol24" alignment="CENTER" layoutX="404.0" layoutY="398.0" prefHeight="100.0" prefWidth="93.0" textFill="#0f13ff">
+               <font>
+                  <Font name="Cambria Bold" size="65.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Label id="titleLabel" layoutX="595.0" layoutY="24.0" prefHeight="48.0" prefWidth="515.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-style: solid;" text="PLUTO - New York Times Crossword Puzzle Solver">
+            <font>
+                <Font name="Cambria Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label id="dateTimeLabel" fx:id="dateTimeLabel" layoutX="1262.0" layoutY="24.0" prefHeight="48.0" prefWidth="500.0" text="Date - Time" textAlignment="CENTER">
+            <font>
+                <Font name="Cambria Bold" size="22.0" />
+            </font>
+        </Label>
+      <Label alignment="CENTER" layoutX="595.0" layoutY="635.0" prefHeight="37.0" prefWidth="500.0" text="Trace Window">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font></Label>
+      <VBox fx:id="consoleVbox" layoutX="595.0" layoutY="111.0" prefHeight="508.0" prefWidth="500.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+      <Button layoutX="149.0" layoutY="704.0" mnemonicParsing="false" onMouseClicked="#downloadPuzzle" prefHeight="64.0" prefWidth="298.0" text="Download Today's Puzzle">
+         <font>
+            <Font name="Cambria Bold" size="22.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="485.0" layoutY="672.0" prefHeight="310.0" prefWidth="721.0">
+         <content>
+            <TextFlow fx:id="trace_window" disable="false" prefHeight="310.0" prefWidth="715.0" style="-fx-border-color: black; -fx-border-width: 1;" />
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="106.0" prefHeight="48.0" prefWidth="500.0" style="-fx-border-color: black; -fx-border-width: 2;" text="The Mini Crossword - Official Solution">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1157.0" layoutY="106.0" prefHeight="48.0" prefWidth="500.0" style="-fx-border-color: black; -fx-border-width: 2;" text="PLUTO - Our Solution">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
